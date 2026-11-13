@@ -1,0 +1,8 @@
+Options -Indexes
+RedirectMatch 403 "(^|/)\."
+<FilesMatch "^(config\..*\.php|db\.php|app\.php|catalog\.php|admin_catalog\.php|auth_helpers\.php|ticket_service\.php)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "(^\.|\.(md|sql|bak|log)$)">
+    Require all denied
+</FilesMatch>
